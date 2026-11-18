@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upskill Hub</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div id="navbar"></div>
+
+<!-- Home -->
+<section id="about-home">
+    <h2>Enroll Our Popular Courses And Skill Up</h2>
+</section>
+
+<!-- Course -->
+ <section id="course-inner">
+    <div class="overview">
+        <img class="course-img" src="../images/c9.jpg" alt="">
+        <div class="course-head">
+            <div class="c-name">
+                <h2>DSA Course</h2>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Data Structures and Algorithms (DSA) are fundamental concepts in computer science used to efficiently organize, manage, and process data. They are crucial for developing optimized programs and solving computational problems effectively.</p>
+            </div>
+            <span>₹6999</span>
+        </div>
+        <h3>Instructor</h3>
+        <div class="tutor">
+            <img src="../images/utkarsh.jpg" alt="">
+            <div class="tutor-det">
+                <h5>Utkarsh Jain</h5>
+                <p>Data Structures & Algorithm Expert</p>
+            </div>
+        </div>
+        <hr>
+        <h3>Course Overview</h3>
+        <p>Data Structures and Algorithms (DSA) are foundational concepts in computer science that help in organizing, storing, and manipulating data efficiently. A data structure refers to a specific way of organizing and storing data in the computer to access and modify it effectively. Examples include arrays, linked lists, stacks, queues, trees, and graphs, each serving distinct purposes depending on the problem at hand. On the other hand, algorithms are step-by-step procedures or formulas used to solve problems, often working hand-in-hand with data structures to ensure optimized performance for specific tasks, such as sorting, searching, and graph traversal.
+        <br><br>
+        Data structures such as arrays provide a simple, fixed-size, contiguous memory allocation, ideal for fast access by index. More complex structures like linked lists allow dynamic memory allocation where each element points to the next, facilitating efficient insertion and deletion. Stacks and queues are specialized structures used for managing data in LIFO (Last In, First Out) and FIFO (First In, First Out) order, respectively, commonly used in various applications such as recursion, job scheduling, and process management.
+        <br><br>
+        Algorithms leverage these data structures to solve problems efficiently. For example, sorting algorithms like QuickSort and MergeSort allow for the rearrangement of elements in a particular order, whereas searching algorithms like Binary Search enable the fast retrieval of elements from sorted data. Graph algorithms are used for problems related to networks, such as finding the shortest path between nodes or exploring connected components. Dynamic programming and greedy algorithms are optimization techniques that solve complex problems by breaking them down into smaller subproblems, with dynamic programming storing intermediate results to avoid redundant calculations.
+        <br><br>
+        The study of DSA not only teaches developers how to use existing data structures and algorithms but also how to analyze the performance of algorithms using Big O notation, which describes the time and space complexity of algorithms. This enables developers to choose the most suitable algorithms and data structures for a given problem, ensuring that solutions are both efficient and scalable. For instance, an algorithm with time complexity of O(n^2) may work for smaller datasets but become impractical for larger datasets, making it crucial to understand the trade-offs involved.
+        <br><br>
+        Finally, DSA is crucial in computer science education and technical interviews. Mastery of these concepts is often a key factor in landing jobs at tech companies, where problem-solving skills and the ability to optimize solutions are highly valued. In real-world applications, DSA ensures that systems can handle large volumes of data and operate efficiently, making it an indispensable part of software development, from web applications to artificial intelligence and machine learning algorithms.</p>
+        <hr>
+        <h3>What you'll learn</h3>
+        <div class="learn">
+            <p><i class="far fa-check-circle"></i>Basic Data Structures: Arrays, linked lists, stacks, queues, trees, and graphs.</p>
+            <p><i class="far fa-check-circle"></i>Operations: Insertion, deletion, and traversal of data structures.</p>    
+            <p><i class="far fa-check-circle"></i>Sorting Algorithms: QuickSort, MergeSort, Bubble Sort.</p>
+            <p><i class="far fa-check-circle"></i>Searching Algorithms: Linear and Binary Search.</p>
+            <p><i class="far fa-check-circle"></i>Graph Algorithms: DFS, BFS, Dijkstra’s Algorithm.</p>
+            <p><i class="far fa-check-circle"></i>Dynamic Programming: Solving problems by breaking them into subproblems.</p>
+            <p><i class="far fa-check-circle"></i>Greedy Algorithms: Making optimal choices at each step.</p>
+            <p><i class="far fa-check-circle"></i>Divide and Conquer: Breaking problems into smaller subproblems.</p>
+            <p><i class="far fa-check-circle"></i>Complexity Analysis: Evaluating algorithms using Big O notation.</p>
+            <p><i class="far fa-check-circle"></i>Problem-Solving: Enhancing coding and interview skills.</p>
+        </div>
+    </div>
+
+    <div class="enroll">
+        <h3>This course includes:</h3>
+        <p><i class="far fa-video"></i>240 hours video</p>
+        <p><i class="far fa-newspaper"></i>1956 articles</p>    
+        <p><i class="far fa-cloud-download"></i>Downloadable resources</p>
+        <p><i class="far fa-infinity"></i>Full lifetime resources</p>
+        <p><i class="far fa-mobile-alt"></i>Access on Mobile</p>
+        <p><i class="far fa-paperclip"></i>Assignments</p>
+        <p><i class="fas fa-tasks-alt"></i>Valuable Projects</p>
+        <p><i class="far fa-trophy-alt"></i>Certificate of completion</p>
+        <p><i class="far fa-money-bill-alt"></i>Stipend</p>
+
+        <div class="enroll-btn">
+            <a href="#" class="blue">Enroll Course</a>
+        </div>
+    </div>
+ </section>
+
+<!-- Footer -->
+    <div id="footer"></div>
+
+
+    <!-- Load Navbar & Footer -->
+    <script>
+
+        // Load Navbar
+        fetch('../components/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+
+                // Mobile menu
+                const menuBtn = document.getElementById('menu-btn');
+                const menuClose = document.getElementById('menu-close');
+                const navMenu = document.querySelector('nav .navigation ul');
+
+                menuBtn.addEventListener('click', function () {
+                    navMenu.classList.add('active');
+                });
+
+                menuClose.addEventListener('click', function () {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+
+        // Load Footer
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+    </script>
+
+</body>
+</html>

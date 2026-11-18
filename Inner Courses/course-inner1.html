@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upskill Hub</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div id="navbar"></div>
+
+    <!-- Home -->
+    <section id="about-home">
+        <h2>Enroll Our Popular Courses And Skill Up</h2>
+    </section>
+
+    <!-- Course -->
+    <section id="course-inner">
+        <div class="overview">
+            <img class="course-img" src="../images/c1.jpg" alt="">
+            <div class="course-head">
+                <div class="c-name">
+                    <h2>JavaScript Course</h2>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>JavaScript (JS) is a lightweight, versatile programming language used to create dynamic and interactive web content. It works alongside HTML and CSS, enabling features like animations, real-time updates, and user interactivity. JavaScript runs in browsers and is widely used in both front-end and back-end development.</p>
+                </div>
+                <span>₹2499</span>
+            </div>
+            <h3>Instructor</h3>
+            <div class="tutor">
+                <img src="../images/vanshika.jpg" alt="">
+                <div class="tutor-det">
+                    <h5>Vanshika Tyagi</h5>
+                    <p>Java & JavaScript Expert</p>
+                </div>
+            </div>
+            <hr>
+            <h3>Course Overview</h3>
+            <p>JavaScript (JS) is a powerful and widely used programming language that enables developers to create dynamic and interactive web content. It is one of the core technologies of the web, alongside HTML and CSS. JavaScript allows web pages to respond to user actions, update content without reloading the page, and enhance the user experience with animations, form validations, and real-time interactions.<br><br>Initially introduced in 1995 by Netscape, JavaScript has evolved significantly over the years. Today, it is supported by all modern web browsers, making it a universal language for web development. Its versatility extends beyond front-end development, as it can also be used on the server side with environments like Node.js, allowing developers to build full-stack applications using a single language.<br><br>JavaScript is known for its event-driven and asynchronous programming capabilities. These features make it well-suited for handling user interactions and real-time updates, such as chat applications and live notifications. Additionally, its dynamic typing and object-oriented programming features make it flexible for a wide range of tasks, from simple scripts to complex web applications.<br><br>The language has a rich ecosystem of libraries and frameworks, including React, Angular, and Vue.js, which simplify the development of modern web applications. It is also used in other domains, such as mobile app development (React Native), game development (Phaser.js), and even desktop applications (Electron.js). This versatility makes JavaScript a valuable skill for developers in various industries.<br><br>In summary, JavaScript plays a crucial role in the modern web, powering the interactive and responsive features that users expect. Its adaptability, ease of use, and wide support have made it an essential tool for developers, cementing its place as one of the most popular programming languages in the world.</p>
+            <hr>
+            <h3>What you'll learn</h3>
+            <div class="learn">
+                <p><i class="far fa-check-circle"></i>Learn Java basics: syntax, data types, and control structures.</p>
+                <p><i class="far fa-check-circle"></i>Master OOP concepts: classes, inheritance, polymorphism, and encapsulation.</p>    
+                <p><i class="far fa-check-circle"></i>Explore core Java APIs: collections, exception handling, and file I/O.</p>
+                <p><i class="far fa-check-circle"></i>Understand multithreading, concurrency, and performance optimization.</p>
+                <p><i class="far fa-check-circle"></i>Gain hands-on experience with IDEs like IntelliJ or Eclipse.</p>
+                <p><i class="far fa-check-circle"></i>Learn frameworks like Spring and Hibernate for enterprise applications.</p>
+                <p><i class="far fa-check-circle"></i>Connect applications to databases using JDBC or ORM tools.</p>
+                <p><i class="far fa-check-circle"></i>Dive into Java 8+ features: lambda expressions and streams.</p>
+                <p><i class="far fa-check-circle"></i>Build real-world projects to solidify knowledge and skills.</p>
+                <p><i class="far fa-check-circle"></i>Prepare for careers with practical problem-solving and interview preparation.</p>
+            </div>
+        </div>
+
+        <div class="enroll">
+            <h3>This course includes:</h3>
+            <p><i class="far fa-video"></i>52 hours video</p>
+            <p><i class="far fa-newspaper"></i>75 articles</p>    
+            <p><i class="far fa-cloud-download"></i>Downloadable resources</p>
+            <p><i class="far fa-infinity"></i>Full lifetime resources</p>
+            <p><i class="far fa-mobile-alt"></i>Access on Mobile</p>
+            <p><i class="far fa-paperclip"></i>Assignments</p>
+            <p><i class="fas fa-tasks-alt"></i>Valuable Projects</p>
+            <p><i class="far fa-trophy-alt"></i>Certificate of completion</p>
+            <p><i class="far fa-money-bill-alt"></i>Stipend</p>
+
+            <div class="enroll-btn">
+                <a href="#" class="blue">Enroll Course</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+
+    <!-- Load Navbar & Footer -->
+    <script>
+
+        // Load Navbar
+        fetch('../components/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+
+                // Mobile menu
+                const menuBtn = document.getElementById('menu-btn');
+                const menuClose = document.getElementById('menu-close');
+                const navMenu = document.querySelector('nav .navigation ul');
+
+                menuBtn.addEventListener('click', function () {
+                    navMenu.classList.add('active');
+                });
+
+                menuClose.addEventListener('click', function () {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+
+        // Load Footer
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+    </script>
+
+</body>
+</html>

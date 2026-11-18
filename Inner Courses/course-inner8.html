@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upskill Hub</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div id="navbar"></div>
+
+<!-- Home -->
+<section id="about-home">
+    <h2>Enroll Our Popular Courses And Skill Up</h2>
+</section>
+
+<!-- Course -->
+ <section id="course-inner">
+    <div class="overview">
+        <img class="course-img" src="../images/c8.jpg" alt="">
+        <div class="course-head">
+            <div class="c-name">
+                <h2>HTML Course</h2>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>HTML (HyperText Markup Language) is the standard markup language used to create and design the structure of web pages. It provides the foundation for building web content by defining elements that describe how different components of a webpage should appear and function.</p>
+            </div>
+            <span>₹299</span>
+        </div>
+        <h3>Instructor</h3>
+        <div class="tutor">
+            <img src="../images/uttam.jpg" alt="">
+            <div class="tutor-det">
+                <h5>Uttam Kumar</h5>
+                <p>Python & Artificial Intelligence Expert</p>
+            </div>
+        </div>
+        <hr>
+        <h3>Course Overview</h3>
+        <p>HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It defines the structure of web pages by using a system of tags and elements. These tags describe how different types of content, like text, images, and links, should be displayed in a web browser. HTML is not a programming language; rather, it's a markup language that dictates the layout and organization of information on web pages.
+        <br><br>
+        An HTML document is composed of several key components. It starts with a html declaration to inform the browser about the document type. The main body of the page is contained within the html element, which houses two primary sections: the head and body. The head includes metadata such as the page title and links to stylesheets or scripts, while the body contains the content visible to the user, including text, images, and links.
+        <br><br>
+        HTML elements consist of an opening tag, content, and a closing tag. Tags are written inside angle brackets, like p for a paragraph or h1 for a main heading. Tags can also have attributes, such as href for linking URLs within anchor tags (a). Some tags, like img, are self-closing and do not require a closing tag. These elements define the structure and presentation of content on a webpage.
+        <br><br>
+        Common HTML elements include headings (h1 to h6), paragraphs (p), links (a), images (img), lists (ul, ol, and li), and tables (table, tr, td). These elements allow web developers to arrange content logically and semantically. For example, the a tag is used to create hyperlinks, while the img tag is used to display images. HTML also allows for the creation of forms with form, input, and other related tags.
+        <br><br>
+        HTML is a fundamental part of web development but is not sufficient on its own to create dynamic, visually rich web experiences. It is typically combined with CSS (for styling) and JavaScript (for interactivity). CSS controls the appearance of HTML elements, while JavaScript adds functionality and responsiveness. Together, HTML, CSS, and JavaScript form the core building blocks of modern web development, enabling developers to create interactive, visually appealing, and user-friendly websites.</p>
+        <hr>
+        <h3>What you'll learn</h3>
+        <div class="learn">
+            <p><i class="far fa-check-circle"></i>HTML Basics: Introduction to HTML and its role in web development.</p>
+            <p><i class="far fa-check-circle"></i>Document Structure: Learn the structure of an HTML page.</p>    
+            <p><i class="far fa-check-circle"></i>Common Tags: Understand basic tags like headings, paragraphs, and links.</p>
+            <p><i class="far fa-check-circle"></i>Attributes: Use attributes like href and src in elements.</p>
+            <p><i class="far fa-check-circle"></i>Semantic HTML: Use meaningful tags for better accessibility and SEO.</p>
+            <p><i class="far fa-check-circle"></i>Lists & Tables: Create lists and tables to organize content.</p>
+            <p><i class="far fa-check-circle"></i>Forms: Build forms with input fields and buttons.</p>
+            <p><i class="far fa-check-circle"></i>Media: Embed images, audio, and video on webpages.</p>
+            <p><i class="far fa-check-circle"></i>HTML5 Features: Explore HTML5 features like local storage and multimedia.</p>
+            <p><i class="far fa-check-circle"></i>Links & Navigation: Create hyperlinks and navigation menus.</p>
+        </div>
+    </div>
+
+    <div class="enroll">
+        <h3>This course includes:</h3>
+        <p><i class="far fa-video"></i>10 hours video</p>
+        <p><i class="far fa-newspaper"></i>36 articles</p>    
+        <p><i class="far fa-cloud-download"></i>Downloadable resources</p>
+        <p><i class="far fa-infinity"></i>Full lifetime resources</p>
+        <p><i class="far fa-mobile-alt"></i>Access on Mobile</p>
+        <p><i class="far fa-paperclip"></i>Assignments</p>
+        <p><i class="fas fa-tasks-alt"></i>Valuable Projects</p>
+        <p><i class="far fa-trophy-alt"></i>Certificate of completion</p>
+        <p><i class="far fa-money-bill-alt"></i>Stipend</p>
+
+        <div class="enroll-btn">
+            <a href="#" class="blue">Enroll Course</a>
+        </div>
+    </div>
+ </section>
+
+<!-- Footer -->
+    <div id="footer"></div>
+
+
+    <!-- Load Navbar & Footer -->
+    <script>
+
+        // Load Navbar
+        fetch('../components/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+
+                // Mobile menu
+                const menuBtn = document.getElementById('menu-btn');
+                const menuClose = document.getElementById('menu-close');
+                const navMenu = document.querySelector('nav .navigation ul');
+
+                menuBtn.addEventListener('click', function () {
+                    navMenu.classList.add('active');
+                });
+
+                menuClose.addEventListener('click', function () {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+
+        // Load Footer
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+    </script>
+
+</body>
+</html>

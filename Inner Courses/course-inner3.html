@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upskill Hub</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div id="navbar"></div>
+
+<!-- Home -->
+<section id="about-home">
+    <h2>Enroll Our Popular Courses And Skill Up</h2>
+</section>
+
+<!-- Course -->
+ <section id="course-inner">
+    <div class="overview">
+        <img class="course-img" src="../images/c3.jpg" alt="">
+        <div class="course-head">
+            <div class="c-name">
+                <h2>Python Beginners Course</h2>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Python is a high-level, interpreted, and general-purpose programming language known for its simplicity, readability, and versatility. It was created by Guido van Rossum and first released in 1991. Python is widely used for various applications, including web development, data analysis, machine learning, automation, scientific computing, and more. Its extensive standard library and large community have contributed to its popularity across diverse industries.</p>
+            </div>
+            <span>₹5299</span>
+        </div>
+        <h3>Instructor</h3>
+        <div class="tutor">
+            <img src="../images/uttam.jpg" alt="">
+            <div class="tutor-det">
+                <h5>Uttam Kumar</h5>
+                <p>Python & Artificial Intelligence Expert</p>
+            </div>
+        </div>
+        <hr>
+        <h3>Course Overview</h3>
+        <p>Python is a versatile and high-level programming language that emphasizes simplicity and readability, making it an excellent choice for both beginners and experienced developers. Created by Guido van Rossum in 1991, Python has grown to become one of the most popular languages globally, supported by a vast community of users and contributors. Its intuitive syntax, inspired by natural language, allows developers to write clean and concise code, which improves productivity and reduces the learning curve for newcomers.
+        <br><br>
+        One of Python's greatest strengths is its extensive standard library and support for third-party modules. This allows developers to accomplish tasks ranging from file handling, networking, and database interactions to web development and scientific computing without reinventing the wheel. Popular libraries like NumPy and pandas are indispensable in data analysis, while frameworks such as Django and Flask power robust web applications. Python’s versatility also extends to emerging technologies like artificial intelligence and machine learning, with TensorFlow and PyTorch leading the charge.
+        <br><br>
+        Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Its dynamic typing and interpreted nature simplify the development process by eliminating the need for explicit type declarations and enabling rapid prototyping. Moreover, Python’s platform independence ensures that code written on one operating system can be easily run on others with minimal changes, making it a preferred choice for cross-platform applications.
+        <br><br>
+        The language has become a cornerstone for data science and automation due to its ability to process, analyze, and visualize data with ease. Python’s scripting capabilities allow developers to automate repetitive tasks, making it an invaluable tool for system administrators and DevOps professionals. From scraping data off the web using BeautifulSoup to automating workflows with Selenium, Python is a go-to tool for enhancing productivity across various domains.
+        <br><br>
+        In conclusion, Python's simplicity, vast ecosystem, and flexibility have cemented its position as a dominant force in the programming world. Whether you're building a web application, analyzing large datasets, or developing AI-driven solutions, Python provides the tools and community support needed to succeed. Its continued evolution and widespread adoption across industries indicate that Python will remain a crucial part of the tech landscape for years to come.</p>
+        <hr>
+        <h3>What you'll learn</h3>
+        <div class="learn">
+            <p><i class="far fa-check-circle"></i>Python Basics: Understanding syntax, variables, and data types.</p>
+            <p><i class="far fa-check-circle"></i>Control Structures: Mastering loops, conditionals, and functions.</p>
+            <p><i class="far fa-check-circle"></i>Data Structures: Working with lists, dictionaries, sets, and tuples.</p>
+            <p><i class="far fa-check-circle"></i>Object-Oriented Programming: Learning classes, objects, inheritance, and encapsulation.</p>
+            <p><i class="far fa-check-circle"></i>Modules and Libraries: Using Python's standard library and third-party modules.</p>
+            <p><i class="far fa-check-circle"></i>File Handling: Reading and writing files for data storage.</p>
+            <p><i class="far fa-check-circle"></i>Error Handling: Managing exceptions to prevent program crashes.</p>
+            <p><i class="far fa-check-circle"></i>Data Science Tools: Analyzing data with NumPy, pandas, and visualizing with Matplotlib.</p>
+            <p><i class="far fa-check-circle"></i>Web Development: Building websites with Flask or Django.</p>
+            <p><i class="far fa-check-circle"></i>Automation: Writing scripts for web scraping and task automation.</p>
+        </div>
+    </div>
+
+    <div class="enroll">
+        <h3>This course includes:</h3>
+        <p><i class="far fa-video"></i>120 hours video</p>
+        <p><i class="far fa-newspaper"></i>289 articles</p>    
+        <p><i class="far fa-cloud-download"></i>Downloadable resources</p>
+        <p><i class="far fa-infinity"></i>Full lifetime resources</p>
+        <p><i class="far fa-mobile-alt"></i>Access on Mobile</p>
+        <p><i class="far fa-paperclip"></i>Assignments</p>
+        <p><i class="fas fa-tasks-alt"></i>Valuable Projects</p>
+        <p><i class="far fa-trophy-alt"></i>Certificate of completion</p>
+        <p><i class="far fa-money-bill-alt"></i>Stipend</p>
+
+        <div class="enroll-btn">
+            <a href="#" class="blue">Enroll Course</a>
+        </div>
+    </div>
+ </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+
+    <!-- Load Navbar & Footer -->
+    <script>
+
+        // Load Navbar
+        fetch('../components/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+
+                // Mobile menu
+                const menuBtn = document.getElementById('menu-btn');
+                const menuClose = document.getElementById('menu-close');
+                const navMenu = document.querySelector('nav .navigation ul');
+
+                menuBtn.addEventListener('click', function () {
+                    navMenu.classList.add('active');
+                });
+
+                menuClose.addEventListener('click', function () {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+
+        // Load Footer
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+    </script>
+
+</body>
+</html>
